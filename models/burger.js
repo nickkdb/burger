@@ -7,8 +7,10 @@ let burger = {
         });
     },
     create: (cols, vals, next) => {
-        orm.insertOne("burgers", )
-    }
+        orm.insertOne("burgers", cols, vals, (res) => {
+            next(res);
+        });
+    },
 }
 
 module.exports = burger;

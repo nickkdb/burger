@@ -15,7 +15,13 @@ burger.all(data => {
 });
 
 router.post("/burgers", (req, res) => {
-    burger.create(["burger_name", "devoured"])
+    burger.create([
+        "burger_name", "devoured"
+    ], [
+        `"${req.body.name}"`, req.body.devoured
+    ], (data) => {
+        res.json({ burgers: data})
+    });
 })
 
 module.exports= router;

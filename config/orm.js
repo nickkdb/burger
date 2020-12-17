@@ -11,7 +11,6 @@ let orm = {
     },
     insertOne: (table, cols, vals, next) => {
         let query= `INSERT INTO ${table} (${cols}) VALUES (${vals})`;
-        console.log(query);
         connection.query(query, (err, res) => {
             if (err) throw err;
             next(res);
