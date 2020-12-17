@@ -2,11 +2,20 @@ var connection= require("./connection");
 
 let orm = {
     
-    selectAll: function() {
-
+    selectAll: (table, next) => {
+        let query= `SELECT * FROM ${table};`;
+        connection.query(query, (err, res) => {
+            if (err) throw err;
+            next(res);
+        });
     },
-    insertOne: function() {
-
+    insertOne: (table, cols, vals, next) => {
+        let query= `INSERT INTO ${table} (${cols}) VALUES (${vals})`;
+        console.log(query);
+        connection.query(query, (err, res) => {
+            if (err) throw err;
+            next(res);
+        })
     },
     updateOne: function() {
 
