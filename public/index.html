@@ -6,6 +6,7 @@
     <title>Eat Da Burger!</title>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="./assets/js/burgers.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -13,7 +14,12 @@
     <p>If you don't see a burger you want, add it! If you do, get to eating!!!</p>
     <input placeholder= "Add a burger" id= "addburg">
     <button id= "submit">Submit</button>
-    <div id= "listburgs"></div>
-    <div id= "devoured"></div>
+    <div class= "container">
+        <div class= "row">
+            <div class= "col-md-6" id= "listburgs"></div>
+            <div class= "col-md-6" id= "devoured"></div>
+        </div>
+    </div>
+    
 </body>
 </html>
