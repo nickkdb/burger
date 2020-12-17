@@ -16,8 +16,12 @@ let orm = {
             next(res);
         })
     },
-    updateOne: function() {
-
+    updateOne: function(table, val, condition, next) {
+    let query= `UPDATE ${table} SET devoured= ${val} WHERE id= ${condition}`;
+    connection.query(query, (err, res) => {
+        if (err) throw err;
+        next(res);
+    });
     },
     deleteOne: function() {
 

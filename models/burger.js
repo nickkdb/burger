@@ -11,6 +11,11 @@ let burger = {
             next(res);
         });
     },
+    update: (val, condition, next) => {
+        orm.updateOne("burgers", val, condition, (res) => {
+            next(res);
+        });
+    }
 }
 
 module.exports = burger;

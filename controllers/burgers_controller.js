@@ -22,6 +22,19 @@ router.post("/burgers", (req, res) => {
     ], (data) => {
         res.json({ burgers: data})
     });
-})
+});
+
+router.put("/burgers/:id", (req, res) => {
+    let condition= req.params.id;
+    console.log(condition);
+
+    burger.update(req.body.devoured, condition, (data) => {
+        if (data.changedRows== 0) {
+            return res.status(404).end();
+        } else {
+            res.json({ id: req.params.id});
+        }
+    });
+});
 
 module.exports= router;
