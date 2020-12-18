@@ -6,13 +6,18 @@ $(function() {
         let list= $("#listburgs");
         let eaten= $("#devoured");
 
-        for (let el of burgers) {
-            let html= `<p> ${el.id}. ${el.burger_name}`
-            if (el.devoured === 0) {
-                html += `<button class= "eat" value= ${el.id}> Devour </button> </p>`
+        for (let el of burgers) {         
+            if (el.devoured === 0) { 
+                let html= `<div class= "row eat"> 
+            <div class= "col-md-8 eat"> ${el.id}. ${el.burger_name} </div>
+            <div class= "col-md-4"> <button class= "btn eat" value= ${el.id}> Devour </button></div>
+            </div>`
                 list.append(html);
             } else {
-                html += `<button class= "btn" value= ${el.id}> Delete </button> </p>`
+                let html= `<div class= "row del"> 
+            <div class= "col-md-8 del"> ${el.id}. ${el.burger_name} </div>
+            <div class= "col-md-4"> <button class= "btn del" value= ${el.id}> Delete </button></div>
+            </div>`
                 eaten.append(html);
             }
         }
