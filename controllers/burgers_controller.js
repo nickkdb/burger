@@ -37,4 +37,16 @@ router.put("/burgers/:id", (req, res) => {
     });
 });
 
+router.delete("/burgers/:id", (req, res) => {
+    let id= req.params.id;
+
+    burger.delete(id, (data) => {
+        if (data.affectedRows == 0) {
+            return res.status(404).end();
+        } else {
+            res.json({id: req.params.id});
+        }
+    })
+})
+
 module.exports= router;

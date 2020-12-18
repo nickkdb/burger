@@ -15,6 +15,11 @@ let burger = {
         orm.updateOne("burgers", val, condition, (res) => {
             next(res);
         });
+    },
+    delete: (id, next) => {
+        orm.deleteOne("burgers", id, (res) => {
+            next(res);
+        });
     }
 }
 

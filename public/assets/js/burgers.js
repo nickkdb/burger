@@ -57,5 +57,16 @@ $(function() {
             console.log("changed status to devoured!");
             location.reload();
         });
-    })
-})
+    });
+
+    $(document).on("click", ".del", function() {
+        let id= $(this).val();
+       
+        $.ajax(`/burgers/${id}`, {
+            type: "DELETE"
+        }).then(function() {
+            console.log("deleted burgers", id);
+            location.reload();
+        });
+    });
+});

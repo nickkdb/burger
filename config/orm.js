@@ -23,8 +23,12 @@ let orm = {
         next(res);
     });
     },
-    deleteOne: function() {
-
+    deleteOne: function(table, id, next) {
+        let query= `DELETE FROM ${table} WHERE id= ${id}`;
+        connection.query(query, (err, res) => {
+            if (err) throw err;
+            next(res);
+        });
     }
 };
 
