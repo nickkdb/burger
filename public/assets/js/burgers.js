@@ -10,13 +10,13 @@ $(function() {
             if (el.devoured === 0) { 
                 let html= `<div class= "row eat"> 
             <div class= "col-md-8 eat"> ${el.id}. ${el.burger_name} </div>
-            <div class= "col-md-4"> <button class= "btn eat" value= ${el.id}> Devour </button></div>
+            <div class= "col-md-4"> <button class= "btn eat e" value= ${el.id}> Devour </button></div>
             </div>`
                 list.append(html);
             } else {
                 let html= `<div class= "row del"> 
             <div class= "col-md-8 del"> ${el.id}. ${el.burger_name} </div>
-            <div class= "col-md-4"> <button class= "btn del" value= ${el.id}> Delete </button></div>
+            <div class= "col-md-4"> <button class= "btn del d" value= ${el.id}> Delete </button></div>
             </div>`
                 eaten.append(html);
             }

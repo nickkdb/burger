@@ -19,5 +19,36 @@ button {
 }
 
 .eat, .del {
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
+}
+
+body {
+    background-color: tan;
+}
+
+h1, h4 {
+    color:navy;
+}
+
+#submit {
+    background-color: navy;
+    color: mintcream;
+}
+
+#addburg {
+    width: 25rem;
+    height: 33px;
+}
+
+.d {
+    background-color: crimson;
+    color: mintcream;
+}
+
+.e {
+    background-color: mediumspringgreen;
+}
+
+div {
+    color: navy;
 }
