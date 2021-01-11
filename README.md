@@ -8,6 +8,8 @@
 - [Testing](#Testing)
 - [Contributing](#Contributing)
 - [Questions](#Questions)
+
+<img src= "./public/assets/images/screenshot.png" alt= "screenshot">
     
 ## License
 > [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) - this project is protected through the MIT license
